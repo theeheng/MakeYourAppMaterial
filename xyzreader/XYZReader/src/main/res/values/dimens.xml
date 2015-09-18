@@ -8,4 +8,8 @@
     <dimen name="fab_press_translation_z">6dp</dimen>
     <dimen name="fab_margin">24dp</dimen>
 
+    <dimen name="flexi_appbar_height">168dp</dimen>
+    <dimen name="keyline_margin">16dp</dimen>
+    <dimen name="keyline_content_start">72dp</dimen>
+    <dimen name="keyline_content_end_with_fab">32dp</dimen>
 </resources>
