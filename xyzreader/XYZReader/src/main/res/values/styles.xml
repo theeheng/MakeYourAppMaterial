@@ -48,4 +48,28 @@
         <item name="android:typeface">monospace</item>
     </style>
 
+    <style name="Theme.Bacon.GridList.Header" parent="@android:style/TextAppearance.DeviceDefault.Small">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/theme_text_header</item>
+        <item name="android:paddingLeft">@dimen/two_line_grid_list_header_text_padding</item>
+        <item name="android:paddingTop">@dimen/two_line_grid_list_header_text_padding</item>
+        <item name="android:paddingRight">@dimen/two_line_grid_list_header_text_padding</item>
+        <item name="android:paddingBottom">@dimen/two_line_grid_list_header_line_padding</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+    </style>
+
+    <style name="Theme.Bacon.GridList.SubHeader" parent="@android:style/TextAppearance.DeviceDefault.Small">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/theme_text_subheader</item>
+        <item name="android:textSize">@dimen/two_line_grid_list_subheader_textsize</item>
+        <item name="android:paddingLeft">@dimen/two_line_grid_list_header_text_padding</item>
+        <item name="android:paddingRight">@dimen/two_line_grid_list_header_text_padding</item>
+        <item name="android:paddingBottom">@dimen/two_line_grid_list_header_text_padding</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
 </resources>
