@@ -23,7 +23,7 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb114211-5528-493c-aaa1-d934efcb8876" name="Default" comment="" />
@@ -71,26 +71,26 @@
       <file leaf-file-name="fragment_article_detail2.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/XYZReader/src/main/res/layout/fragment_article_detail2.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.8906882">
-              <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7591093">
+              <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
               <folding>
-                <element signature="e#1915#1951#0" expanded="true" />
-                <element signature="e#1992#2026#0" expanded="true" />
-                <element signature="e#2068#2102#0" expanded="true" />
-                <element signature="e#2145#2181#0" expanded="true" />
-                <element signature="e#2639#2683#0" expanded="true" />
-                <element signature="e#2889#2920#0" expanded="true" />
-                <element signature="e#3300#3333#0" expanded="true" />
-                <element signature="e#3868#3908#0" expanded="true" />
-                <element signature="e#4461#4492#0" expanded="true" />
-                <element signature="e#4539#4573#0" expanded="true" />
-                <element signature="e#4621#4655#0" expanded="true" />
-                <element signature="e#4698#4732#0" expanded="true" />
-                <element signature="e#4839#4869#0" expanded="true" />
-                <element signature="e#5290#5309#0" expanded="true" />
-                <element signature="e#5346#5365#0" expanded="true" />
-                <element signature="e#5515#5537#0" expanded="true" />
-                <element signature="e#5560#5582#0" expanded="true" />
+                <element signature="e#2018#2054#0" expanded="true" />
+                <element signature="e#2103#2137#0" expanded="true" />
+                <element signature="e#2187#2221#0" expanded="true" />
+                <element signature="e#2272#2308#0" expanded="true" />
+                <element signature="e#2808#2852#0" expanded="true" />
+                <element signature="e#3090#3121#0" expanded="true" />
+                <element signature="e#3557#3590#0" expanded="true" />
+                <element signature="e#4183#4223#0" expanded="true" />
+                <element signature="e#4789#4820#0" expanded="true" />
+                <element signature="e#4871#4905#0" expanded="true" />
+                <element signature="e#4957#4991#0" expanded="true" />
+                <element signature="e#5038#5072#0" expanded="true" />
+                <element signature="e#5187#5217#0" expanded="true" />
+                <element signature="e#5671#5690#0" expanded="true" />
+                <element signature="e#5731#5750#0" expanded="true" />
+                <element signature="e#5916#5938#0" expanded="true" />
+                <element signature="e#5965#5987#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1435,8 +1435,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1289" />
-    <option name="y" value="50" />
+    <option name="x" value="1247" />
+    <option name="y" value="65" />
     <option name="width" value="1288" />
     <option name="height" value="988" />
   </component>
@@ -1970,8 +1970,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1289" y="50" width="1288" height="988" extended-state="0" />
-    <editor active="true" />
+    <frame x="1247" y="65" width="1288" height="988" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2398,26 +2398,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/XYZReader/src/main/res/layout/fragment_article_detail2.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.8906882">
-          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7591093">
+          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
           <folding>
-            <element signature="e#1915#1951#0" expanded="true" />
-            <element signature="e#1992#2026#0" expanded="true" />
-            <element signature="e#2068#2102#0" expanded="true" />
-            <element signature="e#2145#2181#0" expanded="true" />
-            <element signature="e#2639#2683#0" expanded="true" />
-            <element signature="e#2889#2920#0" expanded="true" />
-            <element signature="e#3300#3333#0" expanded="true" />
-            <element signature="e#3868#3908#0" expanded="true" />
-            <element signature="e#4461#4492#0" expanded="true" />
-            <element signature="e#4539#4573#0" expanded="true" />
-            <element signature="e#4621#4655#0" expanded="true" />
-            <element signature="e#4698#4732#0" expanded="true" />
-            <element signature="e#4839#4869#0" expanded="true" />
-            <element signature="e#5290#5309#0" expanded="true" />
-            <element signature="e#5346#5365#0" expanded="true" />
-            <element signature="e#5515#5537#0" expanded="true" />
-            <element signature="e#5560#5582#0" expanded="true" />
+            <element signature="e#2018#2054#0" expanded="true" />
+            <element signature="e#2103#2137#0" expanded="true" />
+            <element signature="e#2187#2221#0" expanded="true" />
+            <element signature="e#2272#2308#0" expanded="true" />
+            <element signature="e#2808#2852#0" expanded="true" />
+            <element signature="e#3090#3121#0" expanded="true" />
+            <element signature="e#3557#3590#0" expanded="true" />
+            <element signature="e#4183#4223#0" expanded="true" />
+            <element signature="e#4789#4820#0" expanded="true" />
+            <element signature="e#4871#4905#0" expanded="true" />
+            <element signature="e#4957#4991#0" expanded="true" />
+            <element signature="e#5038#5072#0" expanded="true" />
+            <element signature="e#5187#5217#0" expanded="true" />
+            <element signature="e#5671#5690#0" expanded="true" />
+            <element signature="e#5731#5750#0" expanded="true" />
+            <element signature="e#5916#5938#0" expanded="true" />
+            <element signature="e#5965#5987#0" expanded="true" />
           </folding>
         </state>
       </provider>
