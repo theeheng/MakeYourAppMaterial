@@ -23,18 +23,18 @@
         <dex dex="I:\GitHub\MakeYourAppMaterial\xyzreader\XYZReader\build\intermediates\pre-dexed\debug\okhttp-1.1.0-58ee0323810270ed8c86ee1527619cb15800ff0c.jar" />
     </item>
     <item
-        jar="I:\GitHub\MakeYourAppMaterial\xyzreader\XYZReader\build\intermediates\exploded-aar\com.android.support\support-v13\22.0.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="7f9cca1caa023a880b00c382bcc5c90245ae4895">
-        <dex dex="I:\GitHub\MakeYourAppMaterial\xyzreader\XYZReader\build\intermediates\pre-dexed\debug\classes-ffe7a232009f8fe3df0cd2660909c0f4e23b083e.jar" />
-    </item>
-    <item
         jar="I:\GitHub\MakeYourAppMaterial\xyzreader\XYZReader\build\intermediates\exploded-aar\com.android.support\design\22.2.0\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
         <dex dex="I:\GitHub\MakeYourAppMaterial\xyzreader\XYZReader\build\intermediates\pre-dexed\debug\classes-bf7443282e8965582534a6d81fcddce688901506.jar" />
+    </item>
+    <item
+        jar="I:\GitHub\MakeYourAppMaterial\xyzreader\XYZReader\build\intermediates\exploded-aar\com.android.support\support-v13\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7f9cca1caa023a880b00c382bcc5c90245ae4895">
+        <dex dex="I:\GitHub\MakeYourAppMaterial\xyzreader\XYZReader\build\intermediates\pre-dexed\debug\classes-ffe7a232009f8fe3df0cd2660909c0f4e23b083e.jar" />
     </item>
     <item
         jar="I:\GitHub\MakeYourAppMaterial\xyzreader\XYZReader\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\classes.jar"

@@ -16,6 +16,9 @@
     <!-- From: file:/I:/GitHub/MakeYourAppMaterial/xyzreader/XYZReader/src/main/res/values/macro_layout.xml -->
     <eat-comment/>
     <bool name="detail_is_card">false</bool>
+    <!-- From: file:/I:/GitHub/MakeYourAppMaterial/xyzreader/XYZReader/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <item format="boolean" name="grid_subheader_single_line" type="bool">true</item>
     <!-- From: file:/I:/GitHub/MakeYourAppMaterial/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="abc_input_method_navigation_guard">@android:color/black</color>
@@ -228,6 +231,12 @@
     <eat-comment/>
     <dimen name="detail_body_top_margin">16dp</dimen>
     <dimen name="detail_card_max_width">10000dp</dimen>
+    <!-- From: file:/I:/GitHub/MakeYourAppMaterial/xyzreader/XYZReader/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="detail_header_title_height">128dp</dimen>
+    <dimen name="detail_image_height">250dp</dimen>
+    <!-- From: file:/I:/GitHub/MakeYourAppMaterial/xyzreader/XYZReader/src/main/res/values/macro_layout.xml -->
+    <eat-comment/>
     <dimen name="detail_inner_horiz_margin">16dp</dimen>
     <dimen name="detail_metabar_title_bottom_padding">4dp</dimen>
     <dimen name="detail_metabar_vert_padding">16dp</dimen>
@@ -247,11 +256,12 @@
     <eat-comment/>
     <dimen name="fab_border_width">0.5dp</dimen>
     <dimen name="fab_content_size">24dp</dimen>
+    <dimen name="fab_elevation">8dp</dimen>
     <!-- From: file:/I:/GitHub/MakeYourAppMaterial/xyzreader/XYZReader/src/main/res/values/dimens.xml -->
     <eat-comment/>
-    <dimen name="fab_elevation">2dp</dimen>
     <dimen name="fab_margin">24dp</dimen>
-    <dimen name="fab_press_translation_z">6dp</dimen>
+    <dimen name="fab_press_translation_z">12dp</dimen>
+    <dimen name="fab_size">56dp</dimen>
     <!-- From: file:/I:/GitHub/MakeYourAppMaterial/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="fab_size_mini">40dp</dimen>
@@ -302,6 +312,8 @@
     <dimen name="tab_min_width">72dp</dimen>
     <!-- From: file:/I:/GitHub/MakeYourAppMaterial/xyzreader/XYZReader/src/main/res/values/dimens.xml -->
     <eat-comment/>
+    <dimen name="toolbar_collapsed_height">144dp</dimen>
+    <dimen name="toolbar_content_insertStart">0dp</dimen>
     <dimen name="two_line_grid_list_header_height">68dp</dimen>
     <dimen name="two_line_grid_list_header_line_padding">4dp</dimen>
     <dimen name="two_line_grid_list_header_text_padding">16dp</dimen>
@@ -312,6 +324,7 @@
     <!-- From: file:/I:/GitHub/MakeYourAppMaterial/xyzreader/XYZReader/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <item format="float" name="detail_body_line_spacing_multiplier" type="fraction">1.25</item>
+    <item format="float" name="detail_header_line_spacing_multiplier" type="fraction">0.9</item>
     <!-- From: file:/I:/GitHub/MakeYourAppMaterial/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <item name="action_bar_activity_content" type="id"/>
@@ -337,6 +350,10 @@
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="abc_max_action_buttons">2</integer>
     <integer name="cancel_button_image_alpha">127</integer>
+    <!-- From: file:/I:/GitHub/MakeYourAppMaterial/xyzreader/XYZReader/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <item format="integer" name="grid_header_max_line" type="integer">2</item>
+    <item format="integer" name="grid_subheader_max_line" type="integer">1</item>
     <!-- From: file:/I:/GitHub/MakeYourAppMaterial/xyzreader/XYZReader/src/main/res/values/macro_layout.xml -->
     <eat-comment/>
     <integer name="list_column_count">2</integer>
@@ -1594,20 +1611,29 @@
     <style name="Theme.Bacon.Detail.Body" parent="@android:style/TextAppearance.DeviceDefault.Medium">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">#00FF00</item>
-        <item name="android:typeface">monospace</item>
+        <item name="android:paddingTop">@dimen/detail_body_top_margin</item>
+        <item name="android:layout_marginLeft">@dimen/keyline_margin</item>
+        <item name="android:layout_marginRight">@dimen/keyline_margin</item>
+        <item name="android:paddingBottom">@dimen/detail_body_bottom_margin</item>
+        <item name="android:textColorLink">@color/theme_accent_a200</item>
+        <item name="android:textSize">@dimen/detail_body_text_size</item>
+        <item name="android:lineSpacingMultiplier">@fraction/detail_body_line_spacing_multiplier</item>
     </style>
     <style name="Theme.Bacon.Detail.HeaderTitle" parent="@android:style/TextAppearance.DeviceDefault.Large">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">#00FF00</item>
-        <item name="android:typeface">monospace</item>
+        <item name="android:paddingBottom">@dimen/detail_metabar_title_bottom_padding</item>
+        <item name="android:fontFamily">Roboto-Condensed</item>
+        <item name="android:textColor">@color/theme_text_header</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/detail_title_text_size</item>
+        <item name="android:lineSpacingMultiplier">@fraction/detail_header_line_spacing_multiplier</item>
     </style>
     <style name="Theme.Bacon.Detail.SubHeaderTitle" parent="@android:style/TextAppearance.DeviceDefault.Small">
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">#00FF00</item>
-        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">@dimen/detail_subhead_text_size</item>
+        <item name="android:textColor">@color/theme_text_subheader</item>
     </style>
     <style name="Theme.Bacon.GridList.Header" parent="@android:style/TextAppearance.DeviceDefault.Small">
         <item name="android:layout_width">match_parent</item>
@@ -1618,7 +1644,7 @@
         <item name="android:paddingRight">@dimen/two_line_grid_list_header_text_padding</item>
         <item name="android:paddingBottom">@dimen/two_line_grid_list_header_line_padding</item>
         <item name="android:ellipsize">end</item>
-        <item name="android:maxLines">2</item>
+        <item name="android:maxLines">@integer/grid_header_max_line</item>
     </style>
     <style name="Theme.Bacon.GridList.SubHeader" parent="@android:style/TextAppearance.DeviceDefault.Small">
         <item name="android:layout_width">match_parent</item>
@@ -1628,8 +1654,8 @@
         <item name="android:paddingLeft">@dimen/two_line_grid_list_header_text_padding</item>
         <item name="android:paddingRight">@dimen/two_line_grid_list_header_text_padding</item>
         <item name="android:paddingBottom">@dimen/two_line_grid_list_header_text_padding</item>
-        <item name="android:maxLines">1</item>
-        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">@integer/grid_subheader_max_line</item>
+        <item name="android:singleLine">@bool/grid_subheader_single_line</item>
         <item name="android:ellipsize">end</item>
     </style>
     <!-- From: file:/I:/GitHub/MakeYourAppMaterial/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->

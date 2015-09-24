@@ -356,15 +356,15 @@ public final class R {
 		public static final int abc_text_size_subtitle_material_toolbar = 0x7f080039;
 		public static final int abc_text_size_title_material = 0x7f08003a;
 		public static final int abc_text_size_title_material_toolbar = 0x7f08003b;
-		public static final int dialog_fixed_height_major = 0x7f080049;
-		public static final int dialog_fixed_height_minor = 0x7f08004a;
-		public static final int dialog_fixed_width_major = 0x7f08004b;
-		public static final int dialog_fixed_width_minor = 0x7f08004c;
-		public static final int disabled_alpha_material_dark = 0x7f08004d;
-		public static final int disabled_alpha_material_light = 0x7f08004e;
-		public static final int notification_large_icon_height = 0x7f080065;
-		public static final int notification_large_icon_width = 0x7f080066;
-		public static final int notification_subtext_size = 0x7f080067;
+		public static final int dialog_fixed_height_major = 0x7f08004b;
+		public static final int dialog_fixed_height_minor = 0x7f08004c;
+		public static final int dialog_fixed_width_major = 0x7f08004d;
+		public static final int dialog_fixed_width_minor = 0x7f08004e;
+		public static final int disabled_alpha_material_dark = 0x7f08004f;
+		public static final int disabled_alpha_material_light = 0x7f080050;
+		public static final int notification_large_icon_height = 0x7f080068;
+		public static final int notification_large_icon_width = 0x7f080069;
+		public static final int notification_subtext_size = 0x7f08006a;
 	}
 	public static final class drawable {
 		public static final int abc_ab_share_pack_mtrl_alpha = 0x7f020000;
@@ -527,7 +527,7 @@ public final class R {
 		public static final int abc_config_activityShortDur = 0x7f0b0001;
 		public static final int abc_max_action_buttons = 0x7f0b0002;
 		public static final int cancel_button_image_alpha = 0x7f0b0003;
-		public static final int status_bar_notification_info_maxnum = 0x7f0b0006;
+		public static final int status_bar_notification_info_maxnum = 0x7f0b0008;
 	}
 	public static final class layout {
 		public static final int abc_action_bar_title_item = 0x7f040000;

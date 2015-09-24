@@ -137,7 +137,7 @@ public class ArticleDetailFragment extends Fragment implements
         });
 
         bindViews();
-       updateStatusBar();
+        updateStatusBar();
 
         return mRootView;
     }
@@ -154,7 +154,7 @@ public class ArticleDetailFragment extends Fragment implements
                     (int) (Color.blue(mMutedColor) * 0.9));
         }
         mStatusBarColorDrawable.setColor(color);
-//        mDrawInsetsFrameLayout.setInsetBackground(mStatusBarColorDrawable);
+        //mDrawInsetsFrameLayout.setInsetBackground(mStatusBarColorDrawable);
     }
 
     static float progress(float v, float min, float max) {
@@ -205,8 +205,7 @@ public class ArticleDetailFragment extends Fragment implements
                                 Palette p = Palette.generate(bitmap, 12);
                                 mMutedColor = p.getDarkMutedColor(0xFF333333);
                                 mPhotoView.setImageBitmap(imageContainer.getBitmap());
-                                mRootView.findViewById(R.id.meta_bar)
-                                        .setBackgroundColor(mMutedColor);
+                                mRootView.findViewById(R.id.meta_bar).setBackgroundColor(mMutedColor);
                                 updateStatusBar();
                             }
                         }
