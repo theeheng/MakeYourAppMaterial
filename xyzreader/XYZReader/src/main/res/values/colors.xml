@@ -22,7 +22,8 @@
     <color name="theme_primary_500">#FF5722</color>
     <color name="theme_primary_dark_700">#E64A19</color>
     <color name="theme_accent_a200">#40c4ff</color>
-    <color name="theme_text_header">#ffe0e0e0</color>
+    <color name="theme_text_grid_header">#ffe0e0e0</color>
+    <color name="theme_text_detail_header">#e0232323</color>
     <color name="theme_text_subheader">#6000</color>
 
 </resources>

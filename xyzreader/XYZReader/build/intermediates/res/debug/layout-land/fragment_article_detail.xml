@@ -1,0 +1,77 @@
+ <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+     <LinearLayout
+         android:orientation="horizontal"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_height="match_parent"
+                android:layout_width="@dimen/detail_photo_width"
+                android:scaleType="centerCrop"/>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:orientation="vertical">
+
+                     <LinearLayout
+                         android:id="@+id/meta_bar"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="?colorPrimaryDark"
+                         android:orientation="vertical"
+                         android:paddingTop="@dimen/keyline_margin"
+                         android:paddingLeft="@dimen/keyline_margin"
+                         android:paddingRight="@dimen/keyline_margin"
+                         android:paddingBottom="@dimen/keyline_margin"
+                         android:layout_gravity="center_horizontal">
+
+                         <TextView
+                             android:id="@+id/article_title"
+                             android:layout_marginTop="@dimen/detail_title_top_margin"
+                             style="@style/Theme.Bacon.Detail.HeaderTitle" />
+
+                         <TextView
+                             android:id="@+id/article_byline"
+                             style="@style/Theme.Bacon.Detail.SubHeaderTitle" />
+
+                     </LinearLayout>
+
+                    <!-- Your Scrollable View -->
+                        <android.support.v4.widget.NestedScrollView
+                            android:id="@+id/scrollView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/article_body"
+                                    style="@style/Theme.Bacon.Detail.Body" />
+
+                        </android.support.v4.widget.NestedScrollView>
+
+            </LinearLayout>
+
+     </LinearLayout>
+
+     <android.support.design.widget.FloatingActionButton
+         android:id="@+id/share_fab"
+         android:background="@drawable/add_fab_background"
+         android:layout_gravity="bottom|end|right"
+         android:layout_marginRight="@dimen/fab_margin"
+         android:layout_marginBottom="@dimen/fab_margin"
+         android:layout_width="@dimen/fab_size"
+         android:layout_height="@dimen/fab_size"
+         android:src="@drawable/ic_share"
+         android:contentDescription="@string/action_share"
+         app:elevation="@dimen/fab_elevation"
+         app:pressedTranslationZ="@dimen/fab_press_translation_z" />
+
+ </android.support.design.widget.CoordinatorLayout>
+<!-- From: file:/Users/hengtan/Documents/MakeYourAppMaterial/xyzreader/XYZReader/src/main/res/layout-land/fragment_article_detail.xml -->
