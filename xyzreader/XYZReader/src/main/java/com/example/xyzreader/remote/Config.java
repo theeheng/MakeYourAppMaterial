@@ -9,7 +9,7 @@ public class Config {
     static {
         URL url = null;
         try {
-            url = new URL("https://dl.dropboxusercontent.com/u/231329/xyzreader_data/data.json" );
+            url = new URL("https://dl.dropboxusercontent.com/u/8767621/data.json" );
             //url = new URL("http://10.0.3.2:8000/data.json" );
         } catch (MalformedURLException ignored) {
             // TODO: throw a real error

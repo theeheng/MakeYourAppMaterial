@@ -34,6 +34,7 @@
 
                         <ImageView
                             android:id="@+id/photo"
+                            android:transitionName="photo"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/detail_image_height"
                             android:scaleType="centerCrop"/>

@@ -17,6 +17,7 @@
         <!--suppress AndroidLintContentDescription -->
         <com.example.xyzreader.ui.DynamicHeightNetworkImageView
             android:id="@+id/thumbnail"
+            android:transitionName="photo"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:scaleType="centerCrop"/>
@@ -38,4 +39,4 @@
         </LinearLayout>
 
     </LinearLayout>
-<!-- From: file:/Users/hengtan/Documents/MakeYourAppMaterial/xyzreader/XYZReader/src/main/res/layout/list_item_article.xml -->
+<!-- From: file:/I:/GitHub/MakeYourAppMaterial/xyzreader/XYZReader/src/main/res/layout/list_item_article.xml -->
