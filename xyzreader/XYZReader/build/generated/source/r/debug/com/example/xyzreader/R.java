@@ -2185,11 +2185,12 @@ containing a value of this type.
         public static final int ic_arrow_back=0x7f02003e;
         public static final int ic_share=0x7f02003f;
         public static final int logo=0x7f020040;
-        public static final int notification_template_icon_bg=0x7f020045;
-        public static final int padded_divider=0x7f020041;
-        public static final int photo_background_protection=0x7f020042;
-        public static final int snackbar_background=0x7f020043;
-        public static final int white_selectable_item_background_circle=0x7f020044;
+        public static final int no_image=0x7f020041;
+        public static final int notification_template_icon_bg=0x7f020046;
+        public static final int padded_divider=0x7f020042;
+        public static final int photo_background_protection=0x7f020043;
+        public static final int snackbar_background=0x7f020044;
+        public static final int white_selectable_item_background_circle=0x7f020045;
     }
     public static final class fraction {
         public static final int detail_body_line_spacing_multiplier=0x7f090000;

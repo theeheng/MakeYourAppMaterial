@@ -48,6 +48,13 @@ public class ArticleDetailActivity extends ActionBarActivity
         }
         setContentView(R.layout.activity_article_detail);
 
+        if (savedInstanceState == null) {
+            if (getIntent() != null && getIntent().getData() != null) {
+                mStartId = ItemsContract.Items.getItemId(getIntent().getData());
+                mSelectedItemId = mStartId;
+            }
+        }
+
         getLoaderManager().initLoader(0, null, this);
 
         mPagerAdapter = new MyPagerAdapter(getFragmentManager());
@@ -97,19 +104,15 @@ public class ArticleDetailActivity extends ActionBarActivity
                     return windowInsets;
                 }
             });
-        }
 
-        if (savedInstanceState == null) {
-            if (getIntent() != null && getIntent().getData() != null) {
-                mStartId = ItemsContract.Items.getItemId(getIntent().getData());
-                mSelectedItemId = mStartId;
-            }
+            postponeEnterTransition();
+
         }
     }
 
     @Override
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
-        return ArticleLoader.newAllArticlesInstance(this);
+        return ArticleLoader.newInstanceForItemId(this, mStartId);
     }
 
     @Override
@@ -117,8 +120,10 @@ public class ArticleDetailActivity extends ActionBarActivity
         mCursor = cursor;
         mPagerAdapter.notifyDataSetChanged();
 
+        mPager.setCurrentItem(0, false);
+
         // Select the start ID
-        if (mStartId > 0) {
+       /* if (mStartId > 0) {
             mCursor.moveToFirst();
             // TODO: optimize
             while (!mCursor.isAfterLast()) {
@@ -131,6 +136,7 @@ public class ArticleDetailActivity extends ActionBarActivity
             }
             mStartId = 0;
         }
+        */
     }
 
     @Override
@@ -162,7 +168,9 @@ public class ArticleDetailActivity extends ActionBarActivity
         @Override
         public Fragment getItem(int position) {
             mCursor.moveToPosition(position);
+
             return ArticleDetailFragment.newInstance(mCursor.getLong(ArticleLoader.Query._ID));
+
         }
 
         @Override

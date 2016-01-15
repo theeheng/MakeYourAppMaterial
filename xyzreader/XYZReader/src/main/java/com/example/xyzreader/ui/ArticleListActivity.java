@@ -24,8 +24,11 @@ import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
 import com.example.xyzreader.data.ItemsContract;
@@ -120,9 +123,12 @@ public class ArticleListActivity extends ActionBarActivity implements
     private class Adapter extends RecyclerView.Adapter<ViewHolder> {
         private Cursor mCursor;
         private Context mContext;
+        private GlideLoaderListener<String, GlideDrawable> mGlideListener;
+
         public Adapter(Cursor cursor, Context ctx) {
             mCursor = cursor;
             mContext = ctx;
+            this.mGlideListener = new GlideLoaderListener<String, GlideDrawable>(mContext, android.R.drawable.ic_menu_gallery, null);
         }
 
         @Override
@@ -137,12 +143,18 @@ public class ArticleListActivity extends ActionBarActivity implements
             final ViewHolder vh = new ViewHolder(view);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View view) {
+                public void onClick(View clickView) {
 
-                    if(Build.VERSION.SDK_INT >= 21) {
-                        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(((Activity)mContext), vh.thumbnailView, "photo");
-                        startActivity(new Intent(Intent.ACTION_VIEW,
-                                ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))), options.toBundle());
+                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+
+                        View img = clickView.findViewById(R.id.thumbnail);
+
+                        if(img !=  null && img instanceof ImageView) {
+                            img.setTransitionName("phototransition");
+                            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(((Activity) mContext), img, "phototransition");
+                            startActivity(new Intent(Intent.ACTION_VIEW,
+                                    ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))), options.toBundle());
+                        }
                     }
                     else
                     {
@@ -166,10 +178,15 @@ public class ArticleListActivity extends ActionBarActivity implements
                             DateUtils.FORMAT_ABBREV_ALL).toString()
                             + " by "
                             + mCursor.getString(ArticleLoader.Query.AUTHOR));
+
+            Glide.with(this.mContext).load(mCursor.getString(ArticleLoader.Query.THUMB_URL)).listener(this.mGlideListener).fitCenter().into(holder.thumbnailView);
+
+/*
             holder.thumbnailView.setImageUrl(
                     mCursor.getString(ArticleLoader.Query.THUMB_URL),
                     ImageLoaderHelper.getInstance(ArticleListActivity.this).getImageLoader());
             holder.thumbnailView.setAspectRatio(mCursor.getFloat(ArticleLoader.Query.ASPECT_RATIO));
+            */
         }
 
         @Override
@@ -179,13 +196,13 @@ public class ArticleListActivity extends ActionBarActivity implements
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public DynamicHeightNetworkImageView thumbnailView;
+        public ImageView thumbnailView;
         public TextView titleView;
         public TextView subtitleView;
 
         public ViewHolder(View view) {
             super(view);
-            thumbnailView = (DynamicHeightNetworkImageView) view.findViewById(R.id.thumbnail);
+            thumbnailView = (ImageView) view.findViewById(R.id.thumbnail);
             titleView = (TextView) view.findViewById(R.id.article_title);
             subtitleView = (TextView) view.findViewById(R.id.article_subtitle);
         }

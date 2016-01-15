@@ -9,6 +9,7 @@ import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.graphics.Palette;
@@ -24,6 +25,8 @@ import android.widget.TextView;
 
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
 
@@ -114,8 +117,6 @@ public class ArticleDetailFragment extends Fragment implements
         Resources res = getActivity().getResources();
         mMutedColor = res.getColor(R.color.theme_primary_500);
 
-        bindViews();
-
         return mRootView;
     }
 
@@ -156,7 +157,10 @@ public class ArticleDetailFragment extends Fragment implements
                             + " by "
                             + mCursor.getString(ArticleLoader.Query.AUTHOR)));
             bodyView.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY)));
-            ImageLoaderHelper.getInstance(getActivity()).getImageLoader()
+
+            Glide.with(getActivity()).load(mCursor.getString(ArticleLoader.Query.PHOTO_URL)).listener(new GlideLoaderListener<String, GlideDrawable>(getActivity(), R.drawable.no_image, mPhotoView)).fitCenter().into(mPhotoView);
+
+            /*ImageLoaderHelper.getInstance(getActivity()).getImageLoader()
                     .get(mCursor.getString(ArticleLoader.Query.PHOTO_URL), new ImageLoader.ImageListener() {
                         @Override
                         public void onResponse(ImageLoader.ImageContainer imageContainer, boolean b) {
@@ -174,10 +178,12 @@ public class ArticleDetailFragment extends Fragment implements
 
                         }
                     });
+                    */
+
         } else {
             mRootView.setVisibility(View.GONE);
             titleView.setText("N/A");
-            bylineView.setText("N/A" );
+            bylineView.setText("N/A");
             bodyView.setText("N/A");
         }
     }
@@ -209,7 +215,6 @@ public class ArticleDetailFragment extends Fragment implements
     @Override
     public void onLoaderReset(Loader<Cursor> cursorLoader) {
         mCursor = null;
-        bindViews();
     }
 
     @Override
