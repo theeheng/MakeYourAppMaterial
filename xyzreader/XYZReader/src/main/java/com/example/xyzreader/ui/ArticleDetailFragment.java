@@ -158,7 +158,15 @@ public class ArticleDetailFragment extends Fragment implements
                             + mCursor.getString(ArticleLoader.Query.AUTHOR)));
             bodyView.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY)));
 
-            Glide.with(getActivity()).load(mCursor.getString(ArticleLoader.Query.PHOTO_URL)).listener(new GlideLoaderListener<String, GlideDrawable>(getActivity(), R.drawable.no_image, mPhotoView)).fitCenter().into(mPhotoView);
+            //Glide.with(getActivity()).load(mCursor.getString(ArticleLoader.Query.PHOTO_URL)).listener(new GlideLoaderListener<String, GlideDrawable>(getActivity(), R.drawable.no_image, mPhotoView)).fitCenter().into(mPhotoView);
+
+            try {
+                Bitmap imageBitmap = Glide.with(getActivity()).load(mCursor.getString(ArticleLoader.Query.PHOTO_URL)).asBitmap().listener(new GlideLoaderListener<String, Bitmap>(getActivity(), R.drawable.no_image, mPhotoView, mMutedColor, mRootView.findViewById(R.id.meta_bar))).into(-1, -1).get();
+            }
+            catch (Exception ex)
+            {
+
+            }
 
             /*ImageLoaderHelper.getInstance(getActivity()).getImageLoader()
                     .get(mCursor.getString(ArticleLoader.Query.PHOTO_URL), new ImageLoader.ImageListener() {

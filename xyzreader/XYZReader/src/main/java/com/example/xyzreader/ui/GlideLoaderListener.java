@@ -2,7 +2,9 @@ package com.example.xyzreader.ui;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.os.Build;
+import android.support.v7.graphics.Palette;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.ImageView;
@@ -18,12 +20,16 @@ public class GlideLoaderListener<T, R> implements RequestListener<T, R> {
     Context ctx;
     int defaultImg;
     ImageView imgView;
+    int mMutedColor;
+    View mMetaBar;
 
-    public GlideLoaderListener(Context c, int img, ImageView imgView)
+    public GlideLoaderListener(Context c, int img, ImageView imgView, int mutedColor, View mBar)
     {
         this.ctx = c;
         this.defaultImg = img;
         this.imgView = imgView;
+        this.mMutedColor = mutedColor;
+        this.mMetaBar = mBar;
     }
     @Override
     public boolean onException(Exception e, Object model, Target target, boolean isFirstResource) {
@@ -40,8 +46,17 @@ public class GlideLoaderListener<T, R> implements RequestListener<T, R> {
         android.util.Log.d("GLIDE LoggingListener", String.format(Locale.ROOT,
                 "onResourceReady(%s, %s, %s, %s, %s)", resource, model, target, isFromMemoryCache, isFirstResource));
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && imgView != null) {
-            scheduleStartPostponedTransition(imgView, ((Activity) this.ctx));
+        if(resource instanceof Bitmap && this.imgView != null)
+        {
+            Bitmap bitmap = (Bitmap) resource;
+            Palette p = Palette.generate(bitmap);
+            this.mMutedColor = p.getLightVibrantColor(this.mMutedColor);
+            this.imgView.setImageBitmap(bitmap);
+            this.mMetaBar.setBackgroundColor(this.mMutedColor);
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && this.imgView != null) {
+            scheduleStartPostponedTransition(this.imgView, ((Activity) this.ctx));
         }
 
         return false;

@@ -128,7 +128,7 @@ public class ArticleListActivity extends ActionBarActivity implements
         public Adapter(Cursor cursor, Context ctx) {
             mCursor = cursor;
             mContext = ctx;
-            this.mGlideListener = new GlideLoaderListener<String, GlideDrawable>(mContext, android.R.drawable.ic_menu_gallery, null);
+            this.mGlideListener = new GlideLoaderListener<String, GlideDrawable>(mContext, android.R.drawable.ic_menu_gallery, null, -1, null );
         }
 
         @Override
