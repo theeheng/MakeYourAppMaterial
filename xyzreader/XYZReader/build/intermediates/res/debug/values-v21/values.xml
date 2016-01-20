@@ -257,4 +257,75 @@
         <item name="android:colorControlHighlight">?attr/colorControlHighlight</item>
         <item name="android:colorButtonNormal">?attr/colorButtonNormal</item>
     </style>
+    <!-- From: file:/I:/GitHub/MakeYourAppMaterial/xyzreader/XYZReader/src/main/res/values-v21/styles.xml -->
+    <eat-comment/>
+    <style name="Theme.Bacon" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/theme_primary_300</item>
+        <item name="colorPrimaryDark">@color/theme_primary_dark_700</item>
+        <item name="colorAccent">@color/theme_accent_a200</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowExitTransition">@transition/fade</item>
+        <item name="android:windowReenterTransition">@transition/fade</item>
+        <item name="android:windowEnterTransition">@transition/window_enter</item>
+        <item name="android:windowReturnTransition">@transition/window_return</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/shared_move</item>
+        <item name="android:windowSharedElementExitTransition">@transition/shared_move</item>
+        <item name="android:windowAllowEnterTransitionOverlap">false</item>
+        <item name="android:windowAllowReturnTransitionOverlap">false</item>
+        <item name="android:windowSharedElementsUseOverlay">false</item>
+    </style>
+    <style name="Theme.Bacon.Detail">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+    <style name="Theme.Bacon.Detail.Body" parent="@android:style/TextAppearance.DeviceDefault.Medium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/detail_body_top_margin</item>
+        <item name="android:layout_marginLeft">@dimen/keyline_margin</item>
+        <item name="android:layout_marginRight">@dimen/keyline_margin</item>
+        <item name="android:paddingBottom">@dimen/detail_body_bottom_margin</item>
+        <item name="android:textColorLink">@color/theme_accent_a200</item>
+        <item name="android:textSize">@dimen/detail_body_text_size</item>
+        <item name="android:lineSpacingMultiplier">@fraction/detail_body_line_spacing_multiplier</item>
+    </style>
+    <style name="Theme.Bacon.Detail.HeaderTitle" parent="@android:style/TextAppearance.DeviceDefault.Large">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">@dimen/detail_metabar_title_bottom_padding</item>
+        <item name="android:fontFamily">Roboto-Condensed</item>
+        <item name="android:textColor">@color/theme_text_detail_header</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/detail_title_text_size</item>
+        <item name="android:lineSpacingMultiplier">@fraction/detail_header_line_spacing_multiplier</item>
+    </style>
+    <style name="Theme.Bacon.Detail.SubHeaderTitle" parent="@android:style/TextAppearance.DeviceDefault.Small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/detail_subhead_text_size</item>
+        <item name="android:textColor">@color/theme_text_subheader</item>
+    </style>
+    <style name="Theme.Bacon.GridList.Header" parent="@android:style/TextAppearance.DeviceDefault.Small">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/theme_text_grid_header</item>
+        <item name="android:paddingLeft">@dimen/two_line_grid_list_header_text_padding</item>
+        <item name="android:paddingTop">@dimen/two_line_grid_list_header_text_padding</item>
+        <item name="android:paddingRight">@dimen/two_line_grid_list_header_text_padding</item>
+        <item name="android:paddingBottom">@dimen/two_line_grid_list_header_line_padding</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">@integer/grid_header_max_line</item>
+    </style>
+    <style name="Theme.Bacon.GridList.SubHeader" parent="@android:style/TextAppearance.DeviceDefault.Small">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/theme_text_subheader</item>
+        <item name="android:textSize">@dimen/two_line_grid_list_subheader_textsize</item>
+        <item name="android:paddingLeft">@dimen/two_line_grid_list_header_text_padding</item>
+        <item name="android:paddingRight">@dimen/two_line_grid_list_header_text_padding</item>
+        <item name="android:paddingBottom">@dimen/two_line_grid_list_header_text_padding</item>
+        <item name="android:maxLines">@integer/grid_subheader_max_line</item>
+        <item name="android:singleLine">@bool/grid_subheader_single_line</item>
+        <item name="android:ellipsize">end</item>
+    </style>
 </resources>

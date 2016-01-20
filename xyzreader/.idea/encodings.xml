@@ -3,7 +3,9 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/XYZReader/src/main/java/com/example/xyzreader/ui/GlideLoaderListener.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/XYZReader/src/main/java/com/example/xyzreader/ui/ProgressBarHelper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/XYZReader/src/main/java/com/example/xyzreader/ui/ScaleTransition.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/XYZReader/src/main/res/drawable-xxhdpi/no_image.jpg" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/XYZReader/src/main/res/drawable/progress.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/XYZReader/src/main/res/transition-v21" charset="UTF-8" />
   </component>
 </project>
