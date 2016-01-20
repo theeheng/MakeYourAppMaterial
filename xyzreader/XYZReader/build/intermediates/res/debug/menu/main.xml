@@ -3,4 +3,4 @@
         android:id="@+id/refresh"
         android:title="@string/action_refresh" />
 </menu>
-<!-- From: file:/Users/hengtan/Documents/MakeYourAppMaterial/xyzreader/XYZReader/src/main/res/menu/main.xml -->
+<!-- From: file:/I:/GitHub/MakeYourAppMaterial/xyzreader/XYZReader/src/main/res/menu/main.xml -->

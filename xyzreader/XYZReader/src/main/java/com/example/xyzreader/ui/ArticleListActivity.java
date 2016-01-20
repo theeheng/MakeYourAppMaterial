@@ -24,6 +24,7 @@ import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -46,6 +47,7 @@ public class ArticleListActivity extends ActionBarActivity implements
     private Toolbar mToolbar;
     //private SwipeRefreshLayout mSwipeRefreshLayout;
     private RecyclerView mRecyclerView;
+    protected FrameLayout progressBarHolder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +55,7 @@ public class ArticleListActivity extends ActionBarActivity implements
         setContentView(R.layout.activity_article_list);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
-
+        progressBarHolder = (FrameLayout) findViewById(R.id.progressBarHolder);
 
         //final View toolbarContainerView = findViewById(R.id.toolbar_container);
 
@@ -82,6 +84,12 @@ public class ArticleListActivity extends ActionBarActivity implements
     protected void onStop() {
         super.onStop();
         unregisterReceiver(mRefreshingReceiver);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        ProgressBarHelper.HideProgressBar(progressBarHolder);
     }
 
     private boolean mIsRefreshing = false;
@@ -151,6 +159,9 @@ public class ArticleListActivity extends ActionBarActivity implements
 
                         if(img !=  null && img instanceof ImageView) {
                             img.setTransitionName("phototransition");
+
+                            ProgressBarHelper.ShowProgressBar(progressBarHolder);
+
                             ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(((Activity) mContext), img, "phototransition");
                             startActivity(new Intent(Intent.ACTION_VIEW,
                                     ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))), options.toBundle());
